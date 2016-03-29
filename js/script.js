@@ -71,8 +71,21 @@ $(window).on('resize', function (){
 });
 
 //Preheader
-$(document).on('scroll',function(){if(window.scrollY>60){$('.preHeader').slideUp()}else{$('.preHeader').slideDown()}})
-
+$(window).on('resize',function(){
+	if($(window).width()>992){
+		$('.preHeader').show();
+$(document).bind('scroll',function(){
+	if(window.scrollY>60){
+		$('.preHeader').slideUp()
+	}else{
+		$('.preHeader').slideDown()
+	}
+});
+}else{
+	$('.preHeader').hide();
+	$(document).unbind('scroll');
+}
+})
 //Select steps
 $('#section-steps > div > div > div:nth-child(2) > div > ul > li').on('click',function(){
 	$('#section-steps > div > div > div:nth-child(2) > div > ul > li').removeClass('active');

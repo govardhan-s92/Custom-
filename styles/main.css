@@ -75,8 +75,7 @@ ul.nav.nav-pills {
     display: none;
 }
 main {
-  text-align: justify;
-  background-color:black; 
+  text-align: justify; 
 }
 /*what we do*/
 #whatWeDo{
@@ -426,12 +425,13 @@ footer .widget_recent_post li {
 }
 .widget_recent_post li a {
   color: #555;
+  text-decoration: underline;
 }
 footer .widget_recent_post li a {
   color: #ccc;
 }
 .logo-small {
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 footer h3, .de_light footer h3 {
@@ -467,6 +467,7 @@ address span strong {
 }
 address span strong {
   display: inline-block;
+  color:#FAB702;
 }
 
 .subfooter {
@@ -488,6 +489,9 @@ a {
   color: #fff;
   text-decoration: none;
 }
-footer a {
+footer a,footer{
   color: #ccc;
+}
+.social-icons a {
+    margin-left: 10px;
 }
