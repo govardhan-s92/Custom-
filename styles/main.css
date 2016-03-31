@@ -227,13 +227,14 @@ section#section-steps {
   border-bottom: 1px solid #27282b;
   color: #ccc;
 }
-de_tab .de_nav li span, .feature-box-small-icon i, a.btn-line::after, .de_count, .social-icons a i, .de_tab.tab_steps .de_nav li span, .de_tab.tab_steps .de_nav li span:hover, .de-gallery .overlay .icon i, .de-gallery .overlay .icon i:hover, header.smaller, #contact_form input[type=submit], #contact_form input[type=submit]:hover, .product img, .product img:hover, .mfp-close, .mfp-close:hover, header.de_header_2 .info, header.de_header_2.smaller .info {
+.de_tab .de_nav li span, .feature-box-small-icon i, a.btn-line::after, .de_count, .social-icons a i, .de_tab.tab_steps .de_nav li span, .de_tab.tab_steps .de_nav li span:hover, .de-gallery .overlay .icon i, .de-gallery .overlay .icon i:hover, header.smaller, #contact_form input[type=submit], #contact_form input[type=submit]:hover, .product img, .product img:hover, .mfp-close, .mfp-close:hover, header.de_header_2 .info, header.de_header_2.smaller .info {
   -o-transition: .5s;
   -ms-transition: .5s;
   -moz-transition: .5s;
   -webkit-transition: .5s;
   transition: .5s;
   outline: none;
+  border:2px solid transparent;
 }
 .bg-color, section.call-to-action, .nav.navbar-nav li li a:hover, .price-row, .blog-list .date, .blog-read .date, .slider-info .text1, #filters a.selected, .btn-primary, .bg-id-color, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, .dropcap, .fullwidthbanner-container a.btn, .feature-box-big-icon i, #testimonial-full, .icon-deco i, .blog-list .date-box .day, .bloglist .date-box .day, .feature-box-small-icon .border, .small-border, #jpreBar, .date-post, .team-list .small-border, .de-team-list .small-border, .btn-line:hover, a.btn-line:hover, .btn-line.hover, a.btn-line.hover, .owl-arrow span, .de-progress .progress-bar, #btn-close-x:hover, .box-fx .info, .de_tab.tab_steps .de_nav li span, .de_testi blockquote::before, #services-list li.active, #services-list li a:hover, .btn-more, .widget .small-border, .product img:hover, #btn-search, .de_tab.timeline li.active .dot {
   background-color: #fab702;
@@ -243,19 +244,20 @@ de_tab .de_nav li span, .feature-box-small-icon i, a.btn-line::after, .de_count,
   border-left: solid 1px rgba(255,255,255,.3);
   display: inline-block;
   margin-bottom: -5px;
+  opacity: 0;
 }
-.de_tab .de_nav li:first-child span {
+/*.de_tab .de_nav li:first-child span {
   border-left: 1px solid #ddd;
 }
 .de_tab .de_nav li:first-child span {
   border-left: 1px solid #000;
-}
-.de_tab .de_nav li.active span {
+}*/
+/*.de_tab .de_nav li.active span {
   background: #FFF;
   border-bottom: 1px solid #fff;
   color: #222;
   margin-bottom: -3px;
-}
+}*/
 .de_tab.tab_steps .de_nav li.active span {
   background: none;
   color: #ffffff;
@@ -494,4 +496,19 @@ footer a,footer{
 }
 .social-icons a {
     margin-left: 10px;
+}
+/*media query for steps vborder*/
+@media(min-width:767px) and (max-width:810px){
+  .nav.navbar-nav a {
+    padding: 15px 0px 15px 16px;
+  }
+  .nav.navbar-nav li a:after{
+    margin-left:16px;
+  }
+}
+/*media query for steps vborder*/
+@media(min-width:1080px) and (max-width:1800px){
+  #section-steps > div > div > div:nth-child(2) > div > ul > li.active.wow.fadeIn.animated > div{
+    opacity: 1;
+  }
 }
