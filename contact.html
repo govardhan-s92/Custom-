@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./styles/contact.css"/><section class="conHeader">
+	CONTACT
+</section>
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:400px;width:100%;'><div id='gmap_canvas' style='height:400px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='#'>Google maps called through ajax</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=d3f611029ede0a8a4caea4ec2d4f47ba6f92cd59'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(12.9085546,77.64590320000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.9085546,77.64590320000002)});infowindow = new google.maps.InfoWindow({content:'<strong>Decorpot</strong><br>23rd Cross Rd, Garden Layout, Sector 2, HSR Layout,<br>560102 Bangalore<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+
+	<section class="container">
+		<form class="form-horizontal col-md-10 col-md-offset-1">
+	<div class="form-group">
+		<div class="col-md-6 col-sm-10 pull-right">
+			<textarea class="form-control" rows="4" placeholder="MESSAGE"></textarea>
+		</div>
+			<div class="col-md-6 col-sm-10"><input type="text" class="form-control" placeholder="NAME*"></div>
+			<div class="col-md-6 col-sm-10"><input type="text" class="form-control" placeholder="MOBILE NUMBER*" style="margin-top: 25px;"></div>
+	</div>
+  <div class="form-group">
+    <div class="col-md-6 col-sm-10">
+      <button type="submit" class="btn btn-yellow">CONTACT US</button>
+    </div>
+  </div>
+</form>
+	</section>
