@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+.wrap{ position:relative; top:0px; left:0px;}
+
+/*  .wrap{  position: relative;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    padding-top: 120px;
+    height: 390px;}
+*/.cube {
+  margin: auto;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  transform-style: preserve-3d;
+  }
+
+  .cube > div {
+    position: absolute;
+    box-sizing: border-box;
+    /*padding: 10px;*/
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background-color: #000;
+    border: solid 1px #eeeeee;
+    color: #ffffff;
+  }
+
+  .front {
+    transform: translateZ(0px);
+  }
+
+  .back {
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+
+  .right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+  }
+
+  .left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+  }
+
+  .top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+  }
+
+  .bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+  }
+
+
+  @keyframes rotate {
+    from {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    
+    to {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+
+  .cube {
+      animation: rotate 20s infinite linear;
+    }
+
+    .wrap:hover .front {
+    transform: translateZ(100px);
+  }
+
+  .wrap:hover .back {
+    transform: translateZ(-200px) rotateY(180deg);
+  }
+
+  .wrap:hover .right {
+    transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+  }
+
+  .wrap:hover .left {
+    transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+  }
+
+  .wrap:hover .top {
+    transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+  }
+
+  .wrap:hover .bottom {
+    transform: rotateX(270deg) translateZ(100px) translateY(100px);
+  }
+
+  .cube > div {
+  transition: transform 0.2s ease-in;
+  }
+/* CSS Document */
+
